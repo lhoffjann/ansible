@@ -1,0 +1,15 @@
+- name: set the PPA
+  apt_repository:
+    repo: aslatter/ppa
+    state: present
+
+
+- name: Install Alacritty
+  become: true
+  apt:
+    name: ["alacritty"]
+  tags:
+    - terminal
+    - install
+    - core
+
