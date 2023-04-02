@@ -1,0 +1,8 @@
+- name: install i3
+  become: true
+  apt:
+    name: ["i3", "htop", "rofi","xss-lock"]
+  tags:
+    - install
+    - core
+
